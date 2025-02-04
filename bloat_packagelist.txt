@@ -1,5 +1,5 @@
 #com.android.chrome
 #com.android.calculator
-com.google.android.calculator
-com.oneplus.calculator
-com.miui.calculator
+#com.google.android.calculator
+#com.oneplus.calculator
+#com.miui.calculator
