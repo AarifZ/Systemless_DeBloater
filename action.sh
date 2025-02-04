@@ -92,6 +92,9 @@ done < "$debloat_list"
 # Save the list of processed app folders (if needed)
 echo "$REPLACE" > "$MODDIR/.lastreplace"
 
-# Countdown before exit
-echo "Please reboot to apply changes. Closing in 15 seconds..."
-sleep 15
+# warn since Magisk's implementation automatically closes if successful
+if [ "$KSU" != "true" -a "$APATCH" != "true" ]; then
+    echo -e "\nClosing dialog in 20 seconds ..."
+    echo -e "Please reboot to apply changes...."
+    sleep 20
+fi
